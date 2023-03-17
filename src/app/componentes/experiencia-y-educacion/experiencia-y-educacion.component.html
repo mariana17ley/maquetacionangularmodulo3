@@ -1,0 +1,61 @@
+<div class="m-2 p-3 border border-dark rounded-3">
+    <!-- experiencias backend puede ser subtitulo una fila sumada con propiedades ? -->
+  
+    <!-- Experiencia  -->
+    <div class="row">
+        <div class="col-11">
+            <div class="fs-4 mb-2" style="display: inline">Experiencia</div>
+            <div class="row m-b3">
+                <!-- contenidoExperiencia1: -->
+                <div class="col-11" id="contenidoExperiencia1"><li>Madre de 3 Hijos</li></div>
+                <input type="text" id="inputExperiencia1" class="form-control" style="display: none;" onkeyup="experiencia1Cambiar()">
+                <input type="text" id="inputExperiencia2" class="form-control" style="display: none;" onkeyup="experiencia2Cambiar2()">
+                <span><button class="btn btn-outline-secondary" type="button" id="enviaExperiencia1" style="display: none;" onclick="enviarExperiencia1()">Enviar</button></span>
+                <span><button class="btn btn-outline-secondary" type="button" id="enviaExperiencia2" style="display: none;" onclick="enviarExperiencia2()">Enviar</button></span>
+            </div>
+        </div>
+        <div class="col-1" id="opcionesExperiencia" style="display: none;">
+            <i class="bi bi-plus-lg"  title="Agregar" style="cursor: pointer; display: inline;"  onclick="showExperiencia()"></i>
+            <i class="bi bi-pencil-fill"  title="Editar" id="editaExperiencia" style="cursor:pointer; display: none;" onclick="showExperiencia2()"></i>
+            <a href="#" data-bs-toggle="modal"  title="Borrar" data-bs-target="#delExperiencia">
+                <i class="bi bi-trash-fill"  id="borrarExperiencia" style="cursor: pointer; display: none;"></i>
+            </a>
+        </div>
+    </div>
+  
+    <!-- Educación -->
+    <div class="row">
+        <div class="col-11">
+            <div class="fs-4 mb-2" style="display: inline">Educación</div>
+            <div class="row m-b3">
+                <!-- contenidoEducación: -->
+                <div class="col-11" id="contenidoEducacion"><li>{{ educacionList.educ }}</li><li>
+                    <div class='row mb-3' style="display: inline">
+                        <div class='col-11'>
+                            <div class='row mb-2'>
+                                <div class='col-1 text-center'>
+                                    <img src='assets/images/argProg2.jpg' alt='Argrntina Programa' width='60' height='50'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-11'>
+                            <div class='fs-5'>Primera Etapa del Plan Argentina Programa</div>
+                            <div class='text-secondary fs-6'> #SéProgramar</div>
+                            <div text-secondary fw-bold> 11 de Junio 2022</div>
+                        </div>
+                    </div></li><li>otros</li>
+                </div>
+                <input type="text" id="inputEducacion" class="form-control" style="display: none;" onkeyup="educacionCambiar()">
+                <input type="text" id="inputEducacion2" class="form-control" style="display: none;" onkeyup="educacionCambiar2()">
+                <span><button class="btn btn-outline-secondary" type="button" id="enviaEducacion" style="display: none;"  onclick="enviarEducacion()">Enviar</button></span>
+                <span><button class="btn btn-outline-secondary" type="button" id="enviaEducacion2" style="display: none;"  onclick="enviarEducacion2()">Enviar</button></span>
+            </div>
+        </div>
+        <div class="col-1" id="opcionesEducacion" style="display: none;">
+            <i class="bi bi-plus-lg" title="Agregar" style="cursor: pointer; display: inline;" onclick="showEducacion()"></i>
+            <i class="bi bi-pencil-fill"  title="Editar" id="editaEducacion" style="cursor:pointer; display: none;" onclick="showEducacion2()"></i>
+            <a href="#" data-bs-toggle="modal" title="Borrar"  data-bs-target="#delEducacion">
+                <i class="bi bi-trash-fill" id="borrarEducacion" style="cursor: pointer; display: none;"></i>
+            </a>
+        </div>
+    </div>

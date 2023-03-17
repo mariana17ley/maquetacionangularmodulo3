@@ -1,0 +1,129 @@
+
+    <app-encabezado></app-encabezado>
+    <app-acerca-de></app-acerca-de>
+    <app-experiencia-y-educacion></app-experiencia-y-educacion>
+    <app-aptitudes></app-aptitudes>
+    <app-logros></app-logros>
+    
+    <!-- Modal Login (Entrar para Modificar) -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Acceso</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-secondary">
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Correo</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmail">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Clave</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="background-color: grey;">
+                <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" onclick="acceso();">Confirmar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Desconectar (Sale y Conserva los Cambios) -->
+    <div class="modal fade" id="logout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Desconectar</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color:yellow;">
+                <div class="mb-3 row text-center" style="color: blue;">
+                    <label for="">
+                        Sale, Confirmando Cambios Realizados ?
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer" style="background-color:yellow;">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="desconectar();">Confirma Salida</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete experiencia-->
+    <div class="modal fade" id="delExperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Experiencia</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Está seguro que desea eliminar la experiencia?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="cursor:pointer" onclick="borrarExperiencia()">Confirmar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete Educación -->
+    <div class="modal fade" id="delEducacion" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel2">Eliminar Educación</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Está seguro que desea eliminar la Educación?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="borrarEducacion()">Confirmar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+        <!-- Modal Contacto -->
+        <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel2">Formulario de Contacto</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="cliente" class="col-sm-2 col-form-label"> Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticNombre">
+                    </div>
+                    <label for="correoCliente" class="col-sm-2 col-form-label"> Correo:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmailContacto">
+                    </div>
+                    <label for="correoCliente" class="col-sm-2 col-form-label"> Asunto:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticAsunto">
+                    </div>
+                    <label for="correoCliente" class="col-sm-2 col-form-label"> Comentario:</label>
+                    <div class="col-sm-10">
+                        <textarea size="12" class="form-control" id="staticComentario"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="contacto()">Enviar</button>
+                </div>
+            </div>
+            </div>
+        </div>

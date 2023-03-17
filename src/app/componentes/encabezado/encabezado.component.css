@@ -1,0 +1,20 @@
+.imagen-perfil {
+    margin-top: -70px;
+    border-radius: 50px;
+}
+
+.imagen{
+    border-radius: 7px 7px 0px 0px;
+}
+
+a:link { 
+    text-decoration: none;
+}
+
+#imagenperfil:hover{
+    transform:translateX(2px);
+    margin-top: -103px;
+    width: 20%; 
+    height: 35%;
+}
+ 
